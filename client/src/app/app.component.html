@@ -1,0 +1,16 @@
+<header>
+  <img src="../assets/logo.svg"/>
+  <h1>Preguntas Frecuentes</h1>
+</header>
+<div class="container">
+  <div id="date">{{updated}}</div>
+  <ul class="list">
+    <li *ngFor="let result of results">
+      <div class="list-question">
+        <p>{{result.index}}</p>
+      </div>
+      <div class="list-answer" [innerHTML]="result.value"></div>
+    </li>
+  </ul>
+</div>
+<router-outlet></router-outlet>
